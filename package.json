@@ -1,11 +1,23 @@
 {
-  "name": "brain-games",
+  "name": "brain-games-mishalisovskiy",
   "version": "1.0.0",
   "description": "Hexlet Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishalisovskiy/brain-games.git"
+  },
+  "bin": {
+  "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
