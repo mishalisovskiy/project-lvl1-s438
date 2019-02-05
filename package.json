@@ -2,7 +2,6 @@
   "name": "brain-games-mishalisovskiy",
   "version": "1.0.0",
   "description": "Hexlet Project",
-  "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mishalisovskiy/brain-games.git"
+    "url": "git+https://github.com/mishalisovskiy/project-lvl1-s438.git"
   },
   "bin": {
   "brain-games": "dist/bin/brain-games.js"
@@ -18,7 +17,9 @@
   "files": [
     "dist"
   ],
-  "author": "",
+  "keywords": 
+    [ "cli" "pet-project", "hexlet"],
+  "author": "miahslisovskiy@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
