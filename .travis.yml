@@ -1,0 +1,4 @@
+language: hode_js
+
+script: 
+  - make lint
