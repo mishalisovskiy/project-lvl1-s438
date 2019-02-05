@@ -35,7 +35,6 @@
     "eslint-plugin-import": "^2.16.0"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^17.1.0",
     "readline-sync": "^1.4.9"
   }
 }
