@@ -5,9 +5,9 @@ import readlineSync from 'readline-sync';
 
 const init = () => {
   console.log('Welcome to the Brain Games!');
-  askUserName();
   console.log('Answer "yes" if number is even, otherwise answer "no".');
 };
+askUserName();
 
 init();
 

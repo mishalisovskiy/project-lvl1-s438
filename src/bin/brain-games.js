@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 
-import askUserName from '..';
+import { askUserName } from '..';
 
-const brainStart = () => {
-  console.log('Welcome to the Brain Games!');
+askUserName();
 
-  askUserName();
-};
-
-brainStart();
+console.log('Welcome to the Brain Games!');
