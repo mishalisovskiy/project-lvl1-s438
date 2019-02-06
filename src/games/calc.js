@@ -13,7 +13,7 @@ const getRandomOperator = () => {
   return '*';
 };
 
-const getMathProblem = () => `${getRandomNum()} ${getRandomOperator()} ${getRandomNum()}`;
+const getMathProblem = () => `${getRandomNum(20)} ${getRandomOperator()} ${getRandomNum(20)}`;
 
 const playBrainCalc = () => {
   greeting();

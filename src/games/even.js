@@ -10,7 +10,7 @@ const playBrainEven = () => {
       return null;
     }
 
-    const randomNum = getRandomNum();
+    const randomNum = getRandomNum(1000);
     console.log(`Question: ${randomNum}`);
     const userInput = readlineSync.question('Your answer: ');
     const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';

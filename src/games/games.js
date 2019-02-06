@@ -1,6 +1,6 @@
 import { greeting } from '..';
 
-export const playBrainGames = () => {
+const playBrainGames = () => {
   greeting();
 };
 
