@@ -6,8 +6,10 @@
 
 [![Build Status](https://travis-ci.org/mishalisovskiy/project-lvl1-s438.svg?branch=master)](https://travis-ci.org/mishalisovskiy/project-lvl1-s438)
 
-<h3>Brain-Even in action:</h3> 
+<h3>Brain-Even in action:</h3>
+
 [![asciicast](https://asciinema.org/a/UF3YxpPaWVKqINJfvNPF7TqmO.svg)](https://asciinema.org/a/UF3YxpPaWVKqINJfvNPF7TqmO)
 
 <h3>Brain-Calc in action:</h3>
+
 [![asciicast](https://asciinema.org/a/OdaXDL0kp3DFoQKcxKCSI1mgb.svg)](https://asciinema.org/a/OdaXDL0kp3DFoQKcxKCSI1mgb)
