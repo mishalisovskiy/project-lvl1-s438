@@ -32,7 +32,7 @@ const playBrainCalc = () => {
       console.log('Correct!');
       return iter(counter + 1);
     }
-    console.log(`'${userInput}' is the wrong answer ;(. The correct answer was ${correctCalculation}.
+    console.log(`'${userInput}' is the wrong answer ;(. The correct answer was '${correctCalculation}'.
 Let's try again, ${userName}!`);
     return null;
   };
