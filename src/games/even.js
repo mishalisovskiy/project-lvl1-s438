@@ -1,10 +1,9 @@
-import { getRandomNum, questionLimit } from '..';
+import { getRandomNum, questionLimit, greeting, userName } from '..';
 import readlineSync from 'readline-sync';
 
 const playBrainEven = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${userName}!`);
-  console.log('Welcome to the Brain Games!');
+  greeting();
+  console.log('Answer \'yes\' if the number is even, otherwise answer \'no\'');
   const iter = (counter) => {
     if (counter === questionLimit) {
       console.log(`Congratulations, ${userName}!`);
