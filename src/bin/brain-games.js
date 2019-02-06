@@ -2,6 +2,10 @@
 
 import askUserName from '..';
 
-console.log('Welcome to the Brain Games!');
+const brainStart = () => {
+  console.log('Welcome to the Brain Games!');
 
-askUserName();
+  askUserName();
+};
+
+brainStart();
