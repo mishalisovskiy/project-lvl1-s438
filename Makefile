@@ -9,3 +9,6 @@ publish:
 
 lint:
 	npx eslint .
+
+remote:
+	git push origin master
