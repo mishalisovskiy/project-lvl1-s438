@@ -8,12 +8,12 @@
 
 <h3>Brain-Even in action:</h3>
 
-<script id="asciicast-UF3YxpPaWVKqINJfvNPF7TqmO" src="https://asciinema.org/a/UF3YxpPaWVKqINJfvNPF7TqmO.js" async></script>
+[![asciicast](https://asciinema.org/a/UF3YxpPaWVKqINJfvNPF7TqmO.svg)](https://asciinema.org/a/UF3YxpPaWVKqINJfvNPF7TqmO)
 
 <h3>Brain-Calc in action:</h3>
 
-<script id="asciicast-OdaXDL0kp3DFoQKcxKCSI1mgb" src="https://asciinema.org/a/OdaXDL0kp3DFoQKcxKCSI1mgb.js" async></script>
+[![asciicast](https://asciinema.org/a/OdaXDL0kp3DFoQKcxKCSI1mgb.svg)](https://asciinema.org/a/OdaXDL0kp3DFoQKcxKCSI1mgb)
 
 <h3>Brain-GCD in action:</h3>
 
-<script id="asciicast-flRsvINYv2pJV4pz8qCMxk57s" src="https://asciinema.org/a/flRsvINYv2pJV4pz8qCMxk57s.js" async></script>
+[![asciicast](https://asciinema.org/a/flRsvINYv2pJV4pz8qCMxk57s.svg)](https://asciinema.org/a/flRsvINYv2pJV4pz8qCMxk57s)
