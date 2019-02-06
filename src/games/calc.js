@@ -4,6 +4,7 @@ import * as math from 'mathjs';
 
 const getRandomOperator = () => {
   const randomForOperator = () => Math.floor(Math.random() * 3);
+  console.log(randomForOperator());
   if (randomForOperator() === 1) {
     return '+';
   }

@@ -7,6 +7,6 @@ export const greeting = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-export const getRandomNum = () => Math.floor(Math.random() * 50);
+export const getRandomNum = () => Math.floor(Math.random() * 20);
 
 export const questionLimit = 3;
