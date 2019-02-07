@@ -1,8 +1,9 @@
-import { getRandomNum, questionLimit, userName, greeting } from '..';
-import readlineSync from 'readline-sync';
+import buildGame from '..';
 import * as math from 'mathjs';
 
-const getRandomOperator = () => {
+const gameTask = 'What is the result of an expression?';
+
+const getOperator = () => {
   const randomForOperator = () => Math.floor(Math.random() * 3);
   if (randomForOperator() === 1) {
     return '+';
@@ -13,30 +14,12 @@ const getRandomOperator = () => {
   return '*';
 };
 
-const getMathProblem = () => `${getRandomNum(20)} ${getRandomOperator()} ${getRandomNum(20)}`;
+const getOperand = () => Math.floor(Math.random() * 20);
+const getMathProblem = () => `${getOperand()} ${getOperator()} ${getOperand()}`;
+const getCorrectAnswer = value => math.eval(value);
+const mathProblemToSting = value => value;
 
-const playBrainCalc = () => {
-  greeting();
-  console.log('What is the result of the expression?');
-  const iter = (counter) => {
-    if (counter === questionLimit) {
-      console.log(`Congratulations, ${userName}!`);
-      return null;
-    }
-    const mathProblem = getMathProblem();
-    const correctCalculation = math.eval(mathProblem);
-    console.log(`Question: ${mathProblem}`);
-    const userInput = readlineSync.question('Your answer: ');
+const playBrainEven = () => buildGame(gameTask, getMathProblem,
+  getCorrectAnswer, mathProblemToSting);
 
-    if (Number(userInput) === correctCalculation) {
-      console.log('Correct!');
-      return iter(counter + 1);
-    }
-    console.log(`'${userInput}' is the wrong answer ;(. The correct answer was '${correctCalculation}'.
-Let's try again, ${userName}!`);
-    return null;
-  };
-  return iter(0);
-};
-
-export default playBrainCalc;
+export default playBrainEven;
