@@ -1,28 +1,20 @@
 import buildGame from '..';
+import getNumber from '../utils/getNumber';
 import * as math from 'mathjs';
 
-class Pair {
-  constructor(car, cdr) {
-    this.car = car;
-    this.cdr = cdr;
-  }
+const brainGCD = () => {
+  const mathProblem = ([getNumber(0, 40), getNumber(0, 40)]);
+  const correctAnswer = math.gcd(mathProblem[0], mathProblem[1]);
+  const mathProblemToSting = `${mathProblem[0]} ${mathProblem[1]}`;
+  const playableObj = Object({
+    task: 'Find the greatest common divisor of given numbers.',
+    problem: mathProblem,
+    answer: correctAnswer,
+    toString: mathProblemToSting,
+  });
+  return playableObj;
+};
 
-  getFirst() {
-    return this.car;
-  }
-
-  getLast() {
-    return this.cdr;
-  }
-}
-
-const gameTask = 'Find the greatest common divisor of given numbers.';
-const getDividend = () => Math.floor(Math.random() * 50);
-const getCorrectAnswer = value => math.gcd(value.getFirst(), value.getLast());
-const getTwoNumbers = () => new Pair(getDividend(), getDividend());
-const getMathProblem = () => getTwoNumbers();
-const mathProblemToSting = value => `${value.getFirst()} ${value.getLast()}`;
-const playBrainGCD = () => buildGame(gameTask, getMathProblem,
-  getCorrectAnswer, mathProblemToSting);
+const playBrainGCD = () => buildGame(brainGCD);
 
 export default playBrainGCD;

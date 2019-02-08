@@ -1,21 +1,21 @@
 import readlineSync from 'readline-sync';
 
-const buildGame = (gameTask, getMathProblem, getCorrectAnswer, mathProblemToSting) => {
+const buildGame = (game) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}!`);
-  console.log(gameTask);
+  console.log(game().task);
   const roundsLimit = readlineSync.question('How many rounds would you like to play? ');
 
   const roundsPlayed = (counter) => {
     if (counter === Number(roundsLimit)) {
       return console.log('Congratulations! You won.');
     }
-    const mathProblem = getMathProblem();
-    console.log(mathProblemToSting(mathProblem));
-    const correctAnswer = String(getCorrectAnswer(mathProblem));
+    const currentData = game();
+    console.log(currentData.toString);
+    const correctAnswer = String(currentData.answer);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === correctAnswer) {
+    if (userAnswer === String(currentData.answer)) {
       console.log('Correct!');
       return roundsPlayed(counter + 1);
     }
