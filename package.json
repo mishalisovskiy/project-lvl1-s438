@@ -39,7 +39,6 @@
     "eslint-plugin-import": "^2.16.0"
   },
   "dependencies": {
-    "hexlet-pairs": "^1.0.8",
     "lodash": "^4.17.11",
     "mathjs": "^5.4.2",
     "readline-sync": "^1.4.9"
