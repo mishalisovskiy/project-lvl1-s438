@@ -1,36 +1,35 @@
 import buildGame from '..';
-import getNumber from '../utils/getNumber';
+import getNumber from '../utils';
 import * as _ from 'lodash';
+
+const gameTask = 'What is the result of an expression?';
 
 const brainCalc = () => {
   const getOperator = () => _.sample(['+', '-', '*']);
-  const getOperand = () => getNumber(0, 20);
-  const mathProblem = [getOperand(), getOperator(), getOperand()];
+  const operand1 = getNumber(0, 20);
+  const operator = getOperator();
+  const operand2 = getNumber(0, 20);
+  const mathProblem = `${operand1} ${operator} ${operand2}`;
 
   const calculateTheExression = (str) => {
     switch (str) {
       case '+':
-        return mathProblem[0] + mathProblem[2];
+        return operand1 + operand2;
       case '-':
-        return mathProblem[0] - mathProblem[2];
+        return operand1 - operand2;
       case '*':
-        return mathProblem[0] * mathProblem[2];
+        return operand1 * operand2;
       default:
         return null;
     }
   };
 
-  const correctAnswer = calculateTheExression(mathProblem[1]);
-  const mathProblemToSting = ([operand1, operator, operand2]) => `${operand1} ${operator} ${operand2}`;
+  const correctAnswer = calculateTheExression(operator);
   const playableObj = Object({
-    task: 'What is the result of an expression?',
-    problem: mathProblem,
+    question: mathProblem,
     answer: correctAnswer,
-    toString: mathProblemToSting(mathProblem),
   });
   return playableObj;
 };
 
-const playBrainCalc = () => buildGame(brainCalc);
-
-export default playBrainCalc;
+export default () => buildGame(brainCalc, gameTask);

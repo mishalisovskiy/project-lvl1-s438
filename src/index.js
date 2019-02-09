@@ -1,17 +1,17 @@
 import readlineSync from 'readline-sync';
 
-const buildGame = (game) => {
+const buildGame = (game, task) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}!`);
-  console.log(game().task);
-  const roundsLimit = readlineSync.question('How many rounds would you like to play? ');
+  console.log(task);
+  const roundsLimit = 3;
 
   const roundsPlayed = (counter) => {
-    if (counter === Number(roundsLimit)) {
+    if (counter === roundsLimit) {
       return console.log('Congratulations! You won.');
     }
     const currentData = game();
-    console.log(currentData.toString);
+    console.log(currentData.question);
     const correctAnswer = String(currentData.answer);
     const userAnswer = readlineSync.question('Your answer: ');
 
@@ -20,7 +20,8 @@ const buildGame = (game) => {
       return roundsPlayed(counter + 1);
     }
 
-    return console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'. Let's try again, ${userName}!`);
+    console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.`);
+    return console.log(`Let's try again, ${userName}!`);
   };
   return roundsPlayed(0);
 };

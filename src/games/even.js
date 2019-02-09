@@ -1,21 +1,18 @@
 import buildGame from '..';
-import getNumber from '../utils/getNumber';
+import getNumber from '../utils';
 
+const gameTask = "Answer 'yes' if a number is even, otherwise answer 'no'.";
+const isEven = value => value % 2 === 0;
 
 const brainEven = () => {
-  const isEven = value => value % 2 === 0;
-  const mathProblem = getNumber(0, 100);
+  const numToEvaluate = getNumber(0, 100);
+  const mathProblem = `${numToEvaluate}`;
   const correctAnswer = value => (isEven(value) ? 'yes' : 'no');
-  const mathProblemToSting = value => String(value);
   const playableObj = Object({
-    task: "Answer 'yes' if a number is even, otherwise answer 'no'.",
-    problem: mathProblem,
+    question: mathProblem,
     answer: correctAnswer(mathProblem),
-    toString: mathProblemToSting(mathProblem),
   });
   return playableObj;
 };
 
-const playBrainEven = () => buildGame(brainEven);
-
-export default playBrainEven;
+export default () => buildGame(brainEven, gameTask);
