@@ -17,3 +17,7 @@
 <h3>Brain-GCD in action:</h3>
 
 [![asciicast](https://asciinema.org/a/flRsvINYv2pJV4pz8qCMxk57s.svg)](https://asciinema.org/a/flRsvINYv2pJV4pz8qCMxk57s)
+
+<h3>Brain-Progression in action:</h3>
+
+[![asciicast](https://asciinema.org/a/18kE6LgLnX6woJvRCtMXcegSC.svg)](https://asciinema.org/a/18kE6LgLnX6woJvRCtMXcegSC)
