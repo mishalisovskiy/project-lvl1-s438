@@ -21,3 +21,7 @@
 <h3>Brain-Progression in action:</h3>
 
 [![asciicast](https://asciinema.org/a/18kE6LgLnX6woJvRCtMXcegSC.svg)](https://asciinema.org/a/18kE6LgLnX6woJvRCtMXcegSC)
+
+<h3>Brain-Prime in action:</h3>
+
+[![asciicast](https://asciinema.org/a/xDuamcMYqc4b1lLOb9AgzyyzL.svg)](https://asciinema.org/a/xDuamcMYqc4b1lLOb9AgzyyzL)
