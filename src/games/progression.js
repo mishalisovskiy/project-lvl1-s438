@@ -7,7 +7,7 @@ const numToAdd = getNumber(0, 20);
 const startingPoint = getNumber(0, 100);
 
 const progressiveArray = () => {
-  let result = [];
+  const result = [];
 
   for (let i = startingPoint; result.length <= 10; i += numToAdd) {
     result.push(i);
