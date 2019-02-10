@@ -15,7 +15,6 @@ const isPrime = (value) => {
   return prime && (value > 1);
 };
 
-const predicateFunction = isPrime;
 const getQuestion = () => getNumber(0, 50);
 
 const brainPrime = () => {
