@@ -7,7 +7,7 @@ const isEven = value => value % 2 === 0;
 const brainEven = () => {
   const numToEvaluate = getNumber(0, 100);
   const question = `${numToEvaluate}`;
-  const answer = (isEven(question) ? 'yes' : 'no');
+  const answer = (isEven(Number(question)) ? 'yes' : 'no');
   return { question, answer };
 };
 

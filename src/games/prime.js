@@ -18,7 +18,7 @@ const isPrime = (value) => {
 const brainPrime = () => {
   const numToEvaluate = getNumber(0, 50);
   const question = `${numToEvaluate}`;
-  const answer = (isPrime(question) ? 'yes' : 'no');
+  const answer = (isPrime(Number(question)) ? 'yes' : 'no');
   return { question, answer };
 };
 
