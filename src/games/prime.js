@@ -15,9 +15,10 @@ const isPrime = (value) => {
   return prime && (value > 1);
 };
 
+const getQuestion = () => getNumber(0, 50);
+
 const brainPrime = () => {
-  const numToEvaluate = getNumber(0, 50);
-  const question = `${numToEvaluate}`;
+  const question = `${getQuestion()}`;
   const answer = (isPrime(Number(question)) ? 'yes' : 'no');
   return { question, answer };
 };
