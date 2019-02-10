@@ -7,7 +7,7 @@ const buildGame = (game, task) => {
   console.log(`Hello ${userName}!`);
   console.log(task);
 
-  const roundsPlayed = (counter) => {
+  const iterateGame = (counter) => {
     if (counter === roundsLimit) {
       return console.log('Congratulations! You won.');
     }
@@ -18,13 +18,13 @@ const buildGame = (game, task) => {
 
     if (userAnswer === String(currentData.answer)) {
       console.log('Correct!');
-      return roundsPlayed(counter + 1);
+      return iterateGame(counter + 1);
     }
 
     console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${userName}!`);
   };
-  return roundsPlayed(0);
+  iterateGame(0);
 };
 
 export default buildGame;
