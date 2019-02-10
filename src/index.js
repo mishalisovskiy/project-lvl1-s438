@@ -10,7 +10,7 @@ const buildGame = (game, task) => {
   const iterateGame = (counter) => {
     if (counter === roundsLimit) {
       console.log('Congratulations! You won.');
-    } else {
+    } {
       const { question, answer } = game();
       console.log(question);
       const userAnswer = readlineSync.question('Your answer: ');
@@ -21,7 +21,7 @@ const buildGame = (game, task) => {
       }
 
       console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${answer}'.`);
-      console.log(`Let's try again, ${userName}!`);
+      return console.log(`Let's try again, ${userName}!`);
     }
   };
   iterateGame(0);
