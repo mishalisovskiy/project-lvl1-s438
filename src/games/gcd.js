@@ -7,9 +7,9 @@ const gameTask = 'Find the greatest common divisor of given numbers.';
 const brainGCD = () => {
   const dividend1 = getNumber(0, 40);
   const dividend2 = getNumber(0, 40);
-  const mathProblem = `${dividend1} ${dividend2}`;
-  const correctAnswer = math.gcd(dividend1, dividend2);
-  return { question: mathProblem, answer: correctAnswer };
+  const question = `${dividend1} ${dividend2}`;
+  const answer = String(math.gcd(dividend1, dividend2));
+  return { question, answer };
 };
 
 export default () => buildGame(brainGCD, gameTask);

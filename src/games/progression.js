@@ -23,9 +23,10 @@ const playProgression = () => {
   const arrayToEvaluate = progressiveArray();
   const arrayToString = arrayToEvaluate.join(' ');
   const replacedItemInArray = _.sample(arrayToEvaluate);
-  const mathProblem = _.replace([arrayToString], replacedItemInArray, '..');
+  const question = _.replace([arrayToString], replacedItemInArray, '..');
+  const answer = String(replacedItemInArray);
 
-  return { question: mathProblem, answer: replacedItemInArray };
+  return { question, answer };
 };
 
 export default () => buildGame(playProgression, gameTask);

@@ -9,20 +9,20 @@ const buildGame = (game, task) => {
 
   const iterateGame = (counter) => {
     if (counter === roundsLimit) {
-      return console.log('Congratulations! You won.');
-    }
-    const currentData = game();
-    console.log(currentData.question);
-    const correctAnswer = String(currentData.answer);
-    const userAnswer = readlineSync.question('Your answer: ');
+      console.log('Congratulations! You won.');
+    } else {
+      const { question, answer } = game();
+      console.log(question);
+      const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === String(currentData.answer)) {
-      console.log('Correct!');
-      return iterateGame(counter + 1);
-    }
+      if (userAnswer === answer) {
+        console.log('Correct!');
+        return iterateGame(counter + 1);
+      }
 
-    console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${answer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+    }
   };
   iterateGame(0);
 };

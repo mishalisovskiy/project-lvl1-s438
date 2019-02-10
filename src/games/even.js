@@ -6,9 +6,9 @@ const isEven = value => value % 2 === 0;
 
 const brainEven = () => {
   const numToEvaluate = getNumber(0, 100);
-  const mathProblem = `${numToEvaluate}`;
-  const correctAnswer = value => (isEven(value) ? 'yes' : 'no');
-  return { question: mathProblem, answer: correctAnswer(mathProblem) };
+  const question = `${numToEvaluate}`;
+  const answer = (isEven(question) ? 'yes' : 'no');
+  return { question, answer };
 };
 
 export default () => buildGame(brainEven, gameTask);

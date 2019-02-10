@@ -15,11 +15,11 @@ const isPrime = (value) => {
   return prime && (value > 1);
 };
 
-const brainProgression = () => {
+const brainPrime = () => {
   const numToEvaluate = getNumber(0, 50);
-  const correctAnswer = value => (isPrime(value) ? 'yes' : 'no');
-  const mathProblem = `${numToEvaluate}`;
-  return { question: mathProblem, answer: correctAnswer(numToEvaluate) };
+  const question = `${numToEvaluate}`;
+  const answer = (isPrime(question) ? 'yes' : 'no');
+  return { question, answer };
 };
 
-export default () => buildGame(brainProgression, gameTask);
+export default () => buildGame(brainPrime, gameTask);

@@ -9,7 +9,6 @@ const brainCalc = () => {
   const operand1 = getNumber(0, 20);
   const operator = getOperator();
   const operand2 = getNumber(0, 20);
-  const mathProblem = `${operand1} ${operator} ${operand2}`;
 
   const calculateTheExression = (str) => {
     switch (str) {
@@ -24,8 +23,9 @@ const brainCalc = () => {
     }
   };
 
-  const correctAnswer = calculateTheExression(operator);
-  return { question: mathProblem, answer: correctAnswer };
+  const question = `${operand1} ${operator} ${operand2}`;
+  const answer = String(calculateTheExression(operator));
+  return { question, answer };
 };
 
 export default () => buildGame(brainCalc, gameTask);
