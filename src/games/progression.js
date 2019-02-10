@@ -1,5 +1,5 @@
 import buildGame from '..';
-import getNumber from '../utils';
+import { getNumber } from '../utils';
 import * as _ from 'lodash';
 
 const gameTask = 'What number is missing in the progression?';

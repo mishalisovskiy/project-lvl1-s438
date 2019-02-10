@@ -1,5 +1,5 @@
 import buildGame from '..';
-import getNumber from '../utils';
+import { getNumber } from '../utils';
 import * as math from 'mathjs';
 
 const gameTask = 'Find the greatest common divisor of given numbers.';

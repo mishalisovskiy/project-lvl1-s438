@@ -1,5 +1,5 @@
 import buildGame from '..';
-import getNumber from '../utils';
+import { getNumber, yesOrNo } from '../utils';
 
 const gameTask = "Answer 'yes' if a given number is prime. Otherwise answer 'no'.";
 
@@ -15,11 +15,12 @@ const isPrime = (value) => {
   return prime && (value > 1);
 };
 
+const predicateFunction = isPrime;
 const getQuestion = () => getNumber(0, 50);
 
 const brainPrime = () => {
   const question = `${getQuestion()}`;
-  const answer = (isPrime(Number(question)) ? 'yes' : 'no');
+  const answer = yesOrNo(isPrime, question);
   return { question, answer };
 };
 
