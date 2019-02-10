@@ -1,5 +1,5 @@
 import buildGame from '..';
-import { getNumber, buildYesOrNoFunc } from '../utils';
+import { buildYesOrNoFunc } from '../utils';
 
 const gameTask = "Answer 'yes' if a given number is prime. Otherwise answer 'no'.";
 

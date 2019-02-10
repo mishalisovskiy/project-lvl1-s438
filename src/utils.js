@@ -4,4 +4,4 @@ export const buildYesOrNoFunc = (predicateFunc, min, max) => {
   const question = `${getNumber(min, max)}`;
   const answer = predicateFunc(question) ? 'yes' : 'no';
   return { question, answer };
-}
+};
