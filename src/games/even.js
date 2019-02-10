@@ -8,11 +8,7 @@ const brainEven = () => {
   const numToEvaluate = getNumber(0, 100);
   const mathProblem = `${numToEvaluate}`;
   const correctAnswer = value => (isEven(value) ? 'yes' : 'no');
-  const playableObj = Object({
-    question: mathProblem,
-    answer: correctAnswer(mathProblem),
-  });
-  return playableObj;
+  return { question: mathProblem, answer: correctAnswer(mathProblem) };
 };
 
 export default () => buildGame(brainEven, gameTask);

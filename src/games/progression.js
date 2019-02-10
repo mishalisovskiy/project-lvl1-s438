@@ -24,11 +24,8 @@ const playProgression = () => {
   const arrayToString = arrayToEvaluate.join(' ');
   const replacedItemInArray = _.sample(arrayToEvaluate);
   const mathProblem = _.replace([arrayToString], replacedItemInArray, '..');
-  const playableObj = Object({
-    question: mathProblem,
-    answer: replacedItemInArray,
-  });
-  return playableObj;
+
+  return { question: mathProblem, answer: replacedItemInArray };
 };
 
 export default () => buildGame(playProgression, gameTask);

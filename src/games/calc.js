@@ -3,9 +3,9 @@ import getNumber from '../utils';
 import * as _ from 'lodash';
 
 const gameTask = 'What is the result of an expression?';
+const getOperator = () => _.sample(['+', '-', '*']);
 
 const brainCalc = () => {
-  const getOperator = () => _.sample(['+', '-', '*']);
   const operand1 = getNumber(0, 20);
   const operator = getOperator();
   const operand2 = getNumber(0, 20);
@@ -25,11 +25,7 @@ const brainCalc = () => {
   };
 
   const correctAnswer = calculateTheExression(operator);
-  const playableObj = Object({
-    question: mathProblem,
-    answer: correctAnswer,
-  });
-  return playableObj;
+  return { question: mathProblem, answer: correctAnswer };
 };
 
 export default () => buildGame(brainCalc, gameTask);
