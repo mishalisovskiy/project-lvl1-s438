@@ -1,10 +1,11 @@
 import readlineSync from 'readline-sync';
 
+const roundsLimit = 3;
+
 const buildGame = (game, task) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}!`);
   console.log(task);
-  const roundsLimit = 3;
 
   const roundsPlayed = (counter) => {
     if (counter === roundsLimit) {
@@ -21,7 +22,7 @@ const buildGame = (game, task) => {
     }
 
     console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.`);
-    return console.log(`Let's try again, ${userName}!`);
+    console.log(`Let's try again, ${userName}!`);
   };
   return roundsPlayed(0);
 };
