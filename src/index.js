@@ -8,7 +8,8 @@ const buildGame = (game, task) => {
 
   const iterateGame = (counter) => {
     if (counter === Number(roundsLimit)) {
-      return console.log('Congratulations! You won.');
+      console.log('Congratulations! You won.');
+      return;
     }
     const { question, answer } = game();
     console.log(question);
@@ -19,7 +20,7 @@ const buildGame = (game, task) => {
       iterateGame(counter + 1);
     } else {
       console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${answer}'`);
-      console.log(`Let's try again, ${userName}!`)    
+      console.log(`Let's try again, ${userName}!`);
     }
   };
   iterateGame(0);
